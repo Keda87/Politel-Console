@@ -11,7 +11,7 @@ Aplikasi student's portal kampus http://students.politekniktelkom.ac.id berbasis
 
 **windows user :** ```$ Politel.py <username>```
 
-**linux user   :** ```python Politel.py <username>```
+**linux user   :** ```$ python Politel.py <username>```
 
 
 
