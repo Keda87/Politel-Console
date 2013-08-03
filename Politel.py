@@ -5,7 +5,7 @@
 POLITEL CONSOLE v.0.1
 
 twitter : @adiyatmubarak
-usage   : Politel.py <username> <password>
+usage   : Politel.py <username>
 --------------------------------------------
 
 LICENSE
@@ -32,6 +32,7 @@ from urllib2 import URLError
 from json import loads
 from os import sys
 from sys import argv
+from getpass import getpass
 
 class Politel(object):
 
@@ -231,8 +232,8 @@ class Politel(object):
 POLITEL CONSOLE v.0.1
 
 twitter : @adiyatmubarak
-usage   : Politel.py <username> <password>
-      eg: Politel.py 30123456 qwerty
+usage   : Politel.py <username>
+      eg: Politel.py 30123456
 --------------------------------------------
 
     [1] Biodata
@@ -244,7 +245,8 @@ usage   : Politel.py <username> <password>
 '''
 
 
-other, nim, pwd = argv
+other, nim = argv
+pwd = getpass("password: ")
 politel = Politel(nim, pwd)
 
 if politel.is_login_auth():
